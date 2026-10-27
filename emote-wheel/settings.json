@@ -1,0 +1,8 @@
+{
+  "_help": "key: the key to hold for the wheel (Unreal's name: T, B, Tab...). pad: the controller button (Gamepad_DPad_Down, Gamepad_DPad_Up...). poses: the game's 14 photo-mode poses on the wheel. pause: the world holds still while the wheel is open. mouse: how far the mouse moves the pointer (1 as made).",
+  "key": "T",
+  "mouse": 1,
+  "pad": "Gamepad_DPad_Down",
+  "pause": true,
+  "poses": true
+}
