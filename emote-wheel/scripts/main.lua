@@ -1,4 +1,4 @@
--- Emote wheel: hold a key (T) or a controller button (D-pad down) for a ring of your cat's emotes and the
+-- Emote wheel: hold a key (G) or a controller button (D-pad down) for a ring of your cat's emotes and the
 -- game's photo-mode poses. Point at one with the mouse or the right stick and let go to play it; let go in
 -- the middle to close it without playing anything. While the wheel is open the world holds still, as in
 -- photo mode, so the camera doesn't turn with the mouse.
@@ -210,7 +210,7 @@ end
 
 Game.onFrame(function()
     if not wheel then
-        local keys = { setting("key", "T"), setting("pad", "Gamepad_DPad_Down") }
+        local keys = { setting("key", "G"), setting("pad", "Gamepad_DPad_Down") }
         for _, k in ipairs(keys) do
             if k and k ~= "" and Game.pressed(k) then
                 open(k)
@@ -300,5 +300,5 @@ Game.every(1, function()
     if wheel and not Game.player() then close(false) end
 end)
 
-MOD.log("ready: hold %s (or %s on a controller) for the wheel", tostring(setting("key", "T")),
+MOD.log("ready: hold %s (or %s on a controller) for the wheel", tostring(setting("key", "G")),
         tostring(setting("pad", "Gamepad_DPad_Down")))
