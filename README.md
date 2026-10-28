@@ -3,7 +3,7 @@
 A ring of your cat's emotes and the game's photo-mode poses, for [wcmods](https://github.com/HexOffender/warrior-cats-mods)
 (Clan Mod Studio), the mod manager for *Warrior Cats: Clans of the Forest*.
 
-**Hold T** (or **D-pad down** on a controller) and the wheel opens in the middle of the screen. Point at
+**Hold G** (or **D-pad down** on a controller) and the wheel opens in the middle of the screen. Point at
 an emote or a pose with the mouse or the right stick, and **let go** to play it. Let go with the pointer
 in the middle to close it without playing anything, or click to play the one pointed at straight away.
 While the wheel is open the world holds still, as in photo mode, so the camera doesn't turn with the mouse.
@@ -26,7 +26,8 @@ one, its sitting-cat icon for the poses, and the paw for emotes.
 - It's an in-game Lua script, so like any script it runs only with **mods that run code allowed**
   (Options, on Clan Mod Studio's Settings and repair page), and it needs the script loader (UE4SS,
   which Get set up installs). Then Apply to game (or press Play).
-- It needs wcmods 0.3.0 or newer (for `Game.anims` and the emotes' list).
+- It needs wcmods 0.3.0 or newer (for `Game.anims` and the emotes' list); its mod.json says so
+  (`"wcmods": "0.3.0"`).
 - Emotes come from other mods: with none installed the wheel has just the poses.
 
 ## Settings
@@ -35,7 +36,7 @@ one, its sitting-cat icon for the poses, and the paw for emotes.
 
 | Setting | What it does |
 |---|---|
-| `key` | The key to hold for the wheel, by Unreal's name (`T`, `B`, `Tab`...). The game doesn't use T |
+| `key` | The key to hold for the wheel, by Unreal's name (`G`, `B`, `Tab`...). The game doesn't read G. Don't pick T: the game opens its map on T |
 | `pad` | The controller button to hold (`Gamepad_DPad_Down`, `Gamepad_DPad_Up`...). The game doesn't use the D-pad while you play |
 | `poses` | `true` puts the game's photo-mode poses on the wheel |
 | `pause` | `true` holds the world still while the wheel is open (and the camera with it) |
@@ -47,7 +48,7 @@ one, its sitting-cat icon for the poses, and the paw for emotes.
 
 ```
 emote-wheel/
-  mod.json          its name, version and the game builds it was made for
+  mod.json          its name, version, the oldest wcmods it needs and the game builds it was made for
   settings.json     its settings (MOD.settings in the script)
   scripts/main.lua  the wheel
 ```
@@ -64,7 +65,7 @@ A test can point the wheel without a mouse: the UE4SS shared variable `EmoteWhee
 (right and down from the middle, up to 1) points it there while it's open.
 
 To try a change: `python wcmods.py agent install --with path\to\emote-wheel` in your wcmods folder
-installs a test build with it, and `agent key T --hold 3` holds the key.
+installs a test build with it, and `agent key G --hold 3` holds the key.
 
 ## Releasing
 

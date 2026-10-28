@@ -1,8 +1,9 @@
 {
   "name": "Emote wheel",
-  "description": "Hold T (or D-pad down on a controller) for a ring of your cat's emotes and the game's photo-mode poses: point with the mouse or the right stick, let go to play. Needs wcmods 0.3.0 or newer, UE4SS, and mods that run code allowed.",
+  "description": "Hold G (or D-pad down on a controller) for a ring of your cat's emotes and the game's photo-mode poses: point with the mouse or the right stick, let go to play. Needs wcmods 0.3.0 or newer, UE4SS, and mods that run code allowed.",
   "version": "1.0",
   "author": "wcmods",
+  "wcmods": "0.3.0",
   "game_builds": [
     26184573
   ],
